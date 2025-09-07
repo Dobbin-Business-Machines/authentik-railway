@@ -35,7 +35,7 @@ title, h1 {
   padding-bottom: 0px !important;
 }
 
-p {
+.pf-c-form p {
   color: #666666 !important;
   margin: auto !important;
   text-align: center !important;
@@ -49,7 +49,7 @@ p {
 
 
 /* --- Force the entire page to a white background --- */
-body, .pf-c-page, [data-ak-interface-root="ak-flow-executor"] {
+[data-ak-interface-root="ak-flow-executor"] body, [data-ak-interface-root="ak-flow-executor"] .pf-c-page, [data-ak-interface-root="ak-flow-executor"] {
     background-color: #FFFFFF !important;
     background-image: none !important;
 }
@@ -60,46 +60,49 @@ body, .pf-c-page, [data-ak-interface-root="ak-flow-executor"] {
 }
 
 /* --- Style the main login form container --- */
-.pf-c-login__main-body, .pf-c-login__main {
+[data-ak-interface-root="ak-flow-executor"] .pf-c-drawer__content, .pf-c-login__main {
     background-color: #FFFFFF !important; /* White background for the form */
     border-radius: 8px !important;
 }
 
 /* --- Style all text to be dark --- */
-.pf-c-login__main-body, .pf-c-login__main, .pf-c-login__main .pf-c-title, .pf-c-form__label, .pf-c-login__main p {
+[data-ak-interface-root="ak-flow-executor"] .pf-c-login__main-body, .pf-c-login__main, .pf-c-login__main .pf-c-title, .pf-c-form__label, .pf-c-login__main p {
     color: #000000 !important;
 }
 
 /* --- Style the primary login button --- */
-.pf-c-button.pf-m-primary {
+[data-ak-interface-root="ak-flow-executor"] .pf-c-button.pf-m-primary {
     background-color: #FF0000 !important; /* Your brand's bright red */
     color: #FFFFFF !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
 }
-.pf-c-button.pf-m-primary:hover {
+[data-ak-interface-root="ak-flow-executor"] .pf-c-button.pf-m-primary:hover {
     background-color: #D90000 !important;
 }
 
 /* --- Restore Social Login Logo Colors --- */
-.pf-c-button__icon img {
+.pf-c-login__main-footer-links .pf-c-button__icon img {
     filter: none !important;
 }
-.pf-c-button__icon.pf-m-start {
+.pf-c-login__main-footer-links .pf-c-button__icon.pf-m-start {
     margin-right: 7px !important;
 }
 
-.pf-c-button {
-  color: #111 !important;
-  text-align: center !important;
-  font-family: "Golos Text", sans-serif  !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  line-height: 1.5rem !important;
-  border: 1px solid #E0E0E0 !important;
-  padding: 6px 8px 0px 8px !important;
-  width: 6rem !important;
+/* --- Style the Social Login Buttons --- */
+.pf-c-login__main-footer-links .pf-c-button {
+    color: #111111 !important;
+    text-align: center !important;
+    font-family: "Golos Text", sans-serif !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 1.5rem !important;
+    border: 1px solid #E0E0E0 !important;
+    padding: 6px 8px 0 !important; /* Removed 0px from padding */
+    width: auto !important; /* Let the button size itself */
+    flex-grow: 1; /* Make buttons share space equally */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .pf-c-login__main-footer-links-item button {
@@ -108,4 +111,8 @@ body, .pf-c-page, [data-ak-interface-root="ak-flow-executor"] {
     display: flex;
     align-items: stretch;
     justify-content: center !important;
+}
+
+.pf-c-login__main-footer-links .pf-c-button:hover {
+    background-color: #F0F0F0 !important; /* A very light grey */
 }

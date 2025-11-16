@@ -87,6 +87,10 @@ Dobbin.ai Branding
     height: 110px !important;
 }
 
+.ak-login-container {
+    width: 480px !important;
+}
+
 title, h1 {
   color: #000000 !important;
   margin: auto !important;
@@ -168,6 +172,8 @@ title, h1 {
     font-weight: 500 !important;
     line-height: 1.5rem !important;
     border: 1px solid #E0E0E0 !important;
+    border-radius: 50px !important;
+    margin-top: 8px !important;
     padding: 6px 8px 0 !important; /* Removed 0px from padding */
     width: auto !important; /* Let the button size itself */
     flex-grow: 1; /* Make buttons share space equally */

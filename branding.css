@@ -192,6 +192,11 @@ title, h1 {
     background-color: #F0F0F0 !important; /* A very light grey */
 }
 
+.pf-c-title {
+  font-size: 0.875rem !important;
+  color: hsl(0 0% 45.1%) !important;
+}
+
 /* Make the avatar icon grayscale */
 
 .pf-c-avatar {

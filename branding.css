@@ -1,13 +1,80 @@
 /*
 ==============================================
-Dobbin.ai Branding (FORCE LIGHT THEME)
+Dobbin.ai Branding 
 ==============================================
 */
+/* --- Global Style for All Primary Buttons (Using colors from provided images) --- */
+
+/* Target all buttons with the 'pf-m-primary' class */
+.pf-c-button.pf-m-primary {
+  background-color: #FF0000 !important; /* Bright red from Image 2 */
+  border-color: #FF0000 !important;
+  color: #ffffff !important; /* Keep text white for readability */
+}
+
+/* Style the hover and focus states */
+.pf-c-button.pf-m-primary:hover,
+.pf-c-button.pf-m-primary:focus {
+  background-color: #CC0000 !important; /* Brighter red from Image 1 */
+  border-color: #CC0000 !important;
+}
+
+/* Style the active state (when the button is being clicked) */
+.pf-c-button.pf-m-primary:active {
+  background-color: #990000 !important; /* Dark red from Image 1 */
+  border-color: #990000 !important;
+}
+/* --- Custom Authentik Spinner Style --- */
+.pf-c-spinner {
+  /* Make it an obvious color to test if the selector is working */
+  --pf-c-spinner--Color: #ff0000; /* Red */
+
+  /* Make it very large to test */
+  --pf-c-spinner--diameter: 80px;
+
+  /* Make the border thicker */
+  --pf-c-spinner--border-width: 8px;
+}
+
+/* Target the success alert variant specifically */
+.pf-c-alert.pf-m-success {
+  /* Change the main background color from green to a dark grey */
+  --pf-c-alert--m-success--BackgroundColor: #212121; /* A nice dark charcoal */
+
+  /* Change the accent bar on the left from green to a neutral grey */
+  --pf-c-alert--before--BackgroundColor: #666666;
+
+  /* Change the icon color from green to white so it's visible on the dark background */
+  --pf-c-alert--m-success__icon--Color: #ffffff;
+}
+
+/* Target the title and text within the success alert */
+.pf-c-alert.pf-m-success .pf-c-alert__title,
+.pf-c-alert.pf-m-success .pf-c-alert__description {
+  color: #000000; /* Make text white for readability */
+}
+
+
+
+/* --- Custom Style for the Inspector Toggle Button --- */
+
+/* Target the button using its unique 'inspector-toggle' class */
+.inspector-toggle.pf-m-primary {
+  /* Change from the default blue to a dark charcoal */
+  background-color: #212121 !important;
+}
+
+/* Style the hover and focus states for consistency */
+.inspector-toggle.pf-m-primary:hover,
+.inspector-toggle.pf-m-primary:focus {
+  /* A slightly lighter grey for feedback */
+  background-color: #424242 !important;
+}
 
 .ak-brand {
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     min-height: 180px;
     padding: 0 !important;
     border-top-right-radius: 8px !important;
@@ -63,6 +130,8 @@ title, h1 {
 [data-ak-interface-root="ak-flow-executor"] .pf-c-drawer__content, .pf-c-login__main {
     background-color: #FFFFFF !important; /* White background for the form */
     border-radius: 8px !important;
+    max-width: 480px !important;
+    margin-top: 100px !important;
 }
 
 /* --- Style all text to be dark --- */
@@ -115,4 +184,10 @@ title, h1 {
 
 .pf-c-login__main-footer-links .pf-c-button:hover {
     background-color: #F0F0F0 !important; /* A very light grey */
+}
+
+/* Make the avatar icon grayscale */
+
+.pf-c-avatar {
+  filter: grayscale(1) !important;
 }
